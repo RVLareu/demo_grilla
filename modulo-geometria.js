@@ -30,8 +30,8 @@
 var superficie3D;
 var mallaDeTriangulos;
 
-var filas=60;
-var columnas=60;
+var filas=3;
+var columnas=5;
 
 
 function crearGeometria(){
@@ -39,8 +39,12 @@ function crearGeometria(){
     if (PRIMITIVA == "plano") {
         superficie3D=new Plano(filas, columnas);
     } else if (PRIMITIVA == "esfera") {
-        superficie3D=new Esfera(0.5);
+        filas = 80;
+        columnas = 80;
+        superficie3D=new Esfera(0.8);
     } else if (PRIMITIVA == "tubo senoidal") {
+        filas = 80;
+        columnas = 80;
         superficie3D=new TuboSenoidal(0.1, 0.5, 2, 6);
     }
     
